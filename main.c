@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(){
-    int i=300;
-
-    int *pi = &i; //4byte 적절한 자료형을 사용하좡*v*
-    char *pc = (char*)&i; //1byte
-
-    printf("%i,%i,%i\n", i, *pi,*pc);
-
-
-    return 0;
+void swap(int *x, int *y){
+int temp=*x;
+*x=*y;
+*y=temp;
 }
 
+
+int main(){
+    int a=3;
+    int b=5;
+
+    swap(&a, &b);
+    printf("a: %i, b: %i\n", a, b);
+    return 0;
+}
