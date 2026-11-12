@@ -2,24 +2,14 @@
 #include <stdlib.h>
 
 int main(){
-    int i=10;
-    char c='a';
+    int i=300;
 
-    int *iptr;
-    char *cptr;
-    int *iptr2;
+    int *pi = &i; //4byte 적절한 자료형을 사용하좡*v*
+    char *pc = (char*)&i; //1byte
 
-    iptr = &i;
-    cptr = &c;
-    iptr2 = iptr;
-
-
-    printf("i : %p\n%p(size:%i)\n", iptr, &i, sizeof(iptr));
-    printf("c : %p\n%p(size:%i)\n", cptr, &c, sizeof(cptr));
-    printf("ptr2 : %p,%i\n", iptr2, *iptr2);
-  
-
+    printf("%i,%i,%i\n", i, *pi,*pc);
 
 
     return 0;
 }
+
